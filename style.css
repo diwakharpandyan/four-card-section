@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: hsl(234, 12%, 34%);
+  padding: 1rem;
+  background-color: hsl(0, 0%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 21rem;
+  min-width: 18rem;
+}
+.four-card {
+  padding: 1.5rem;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.title-container {
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+.title {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+span {
+  font-weight: 600;
+}
+.title-info {
+  font-size: 0.8rem;
+  color: hsl(229, 6%, 66%);
+}
+.four-card-title {
+  font-size: 1rem;
+  margin: 0;
+}
+.four-card-info {
+  font-size: 0.7rem;
+  max-width: 90%;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 2rem;
+}
+.four-card-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.four-card-image {
+  height: 3rem;
+}
+.supervisor {
+  border-top: 3px solid hsl(180, 62%, 55%);
+}
+.team-builder {
+  border-top: 3px solid hsl(0, 78%, 62%);
+}
+.karma {
+  border-top: 3px solid hsl(34, 97%, 64%);
+}
+.calculator {
+  border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+@media (min-width: 50rem) {
+  main {
+    max-width: 62rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "title title title"
+      "supervisor team-builder calculator"
+      "supervisor karma calculator";
+  }
+  .title-container {
+    grid-area: title;
+  }
+  .title-info {
+    max-width: 30rem;
+  }
+  .supervisor {
+    grid-area: supervisor;
+    align-self: center;
+  }
+  .team-builder {
+    grid-area: team-builder;
+  }
+  .karma {
+    grid-area: karma;
+  }
+  .calculator {
+    grid-area: calculator;
+    align-self: center;
+  }
+  .title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .four-card-image {
+    height: 4rem;
+  }
+  .four-card-title {
+    font-size: 1.1rem;
+  }
+}
