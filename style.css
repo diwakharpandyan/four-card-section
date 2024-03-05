@@ -16,7 +16,6 @@ main {
   grid-template-rows: repeat(5, 1fr);
   gap: 1.5rem;
   max-width: 21rem;
-  min-width: 18rem;
 }
 .four-card {
   padding: 1.5rem;
